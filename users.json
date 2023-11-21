@@ -1,0 +1,34 @@
+{
+    "username1": {
+        "hashed_password": "hashed_password_value",
+        "salt": "salt_value"
+    },
+    "username2": {
+        "hashed_password": "hashed_password_value",
+        "salt": "salt_value"
+    },
+    "user": {
+        "hashed_password": "$2b$12$xPeu/Cj6q3hYRdyCOLhwveqS0gL2xBgZ8hOHDNkgj473WSWw8T/T6",
+        "salt": "$2b$12$xPeu/Cj6q3hYRdyCOLhwve"
+    },
+    "user1": {
+        "hashed_password": "$2b$12$.pKEkqEsqwvZBZpTnczAFuTgOhaUjBQ5dL6p40ZN9Slb1lsgEo4nm",
+        "salt": "$2b$12$.pKEkqEsqwvZBZpTnczAFu"
+    },
+    "User1": {
+        "hashed_password": "$2b$12$DbaPuBl33htQIp/JuMZhWuRjES5pHWZLmpP1qrT9uQBytxDIi6d4e",
+        "salt": "$2b$12$DbaPuBl33htQIp/JuMZhWu"
+    },
+    "user5": {
+        "hashed_password": "$2b$12$3TAmICxaAN1RKa4TS260XesLdZLJuuH/hgfSgnEdkhdDvklGL9qy6",
+        "salt": "$2b$12$3TAmICxaAN1RKa4TS260Xe"
+    },
+    "admin6": {
+        "hashed_password": "$2b$12$d7AnqGwbV1y4xoPgbSAIJuUzCIG6skrkYmxe60hvNgK/B3KO0rwCS",
+        "salt": "$2b$12$d7AnqGwbV1y4xoPgbSAIJu"
+    },
+    "admin": {
+        "hashed_password": "$2b$12$4dDcjqvrvQXnnanj8lxEpOXYzbIlu5sez8E0ZZ5fnp.bJYrofaH1e",
+        "salt": "$2b$12$4dDcjqvrvQXnnanj8lxEpO"
+    }
+}
