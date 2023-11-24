@@ -10,7 +10,7 @@ This project showcases user authentication and authorization features implemente
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/flask-auth-app.git
+   git clone https://github.com/VineetDabholkar2002.git
    ```
 2. **Navigate to the Project Directory:**
    ```bash
