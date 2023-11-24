@@ -1,4 +1,3 @@
-
 from base64 import b64encode
 import requests
 from flask import Flask, request, render_template, redirect, session, jsonify
@@ -6,30 +5,9 @@ import json
 import bcrypt
 import jwt  # Install PyJWT for JWT functionality
 import datetime
-from flask import Flask, request, render_template, redirect, session, jsonify, url_for, flash
-from flask_oauth import OAuth
-import json
-import bcrypt
-import jwt  # Install PyJWT for JWT functionality
-import datetime
-
 
 app = Flask(__name__)
 app.secret_key = 'secretkey123'
-oauth = OAuth(app)
-
-
-# Replace 'your-github-client-id' and 'your-github-client-secret' with your actual GitHub OAuth client ID and client secret.
-github = oauth.remote_app(
-    'github',
-    base_url='https://api.github.com/',
-    request_token_url=None,
-    access_token_method='POST',
-    access_token_url='https://github.com/login/oauth/access_token',
-    authorize_url='https://github.com/login/oauth/authorize',
-    consumer_key='your-github-client-id',  # Replace with your GitHub Client ID
-    consumer_secret='your-github-client-secret'  # Replace with your GitHub Client Secret
-)
 users_db = {}
 
 
@@ -152,48 +130,14 @@ def login():
             if response.status_code == 200:
                 return redirect('/main')
             else:
-                print(response.content)  # Add this line to print the response content
+                print(response.content)
                 error = "Invalid credentials"
         else:
-            print(response.content)  # Add this line to print the response content
+            print(response.content)
             error = "Invalid credentials"
 
     return render_template('login.html', error=error)
 
-
-@app.route('/oauth_login')
-def oauth_login():
-    return github.authorize(callback=url_for('oauth_authorized', _external=True))
-
-
-@app.route('/oauth_authorized')
-@github.authorized_handler
-def oauth_authorized(resp):
-    next_url = request.args.get('next') or url_for('oauth_main')
-    if resp is None or 'access_token' not in resp:
-        return redirect(next_url)
-
-    session['github_token'] = (resp['access_token'], '')
-    user_info = github.get('user')
-    session['logged_in'] = True
-
-    flash('You were logged in as %s' % user_info.data['login'])
-    return redirect(next_url)
-
-
-@app.route('/logout')
-def logout():
-    session.pop('github_token', None)
-    session['logged_in'] = False
-    flash('You were logged out')
-    return redirect(url_for('index'))
-
-
-@app.route('/oauth_main')
-def oauth_main():
-    if 'github_token' in session:
-        return 'Logged in as %s' % github.get('user').data['login']
-    return 'Not logged in'
 
 
 if __name__ == '__main__':
