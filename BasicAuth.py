@@ -3,7 +3,7 @@ import requests
 from flask import Flask, request, render_template, redirect, session, jsonify
 import json
 import bcrypt
-import jwt  # Install PyJWT for JWT functionality
+import jwt  
 import datetime
 
 app = Flask(__name__)
