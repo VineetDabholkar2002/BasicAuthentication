@@ -27,13 +27,6 @@ This project showcases user authentication and authorization features implemente
 5. **Access the Application:**
    Open your web browser and navigate to `http://localhost:8080`.
 
-## Features and Routes
-
-- **Sign Up:** `/signup` route allows users to create a new account by providing a unique username and password.
-- **Login:** `/login` route enables users to log in using Basic Auth.
-- **Protected Route:** Access `/main` route after successful login to view protected content.
-- **Token-Based Authentication:** The application generates and verifies Bearer Tokens for user authentication.
-
 ## File Structure
 
 - `app.py`: Contains the Flask application logic, routes, and authentication functionalities.
