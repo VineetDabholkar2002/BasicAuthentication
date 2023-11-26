@@ -132,22 +132,3 @@ This application utilizes bcrypt for secure password hashing and storage:
 
 
 
-
-This application utilizes bcrypt for secure password hashing and storage:
-
-### What is bcrypt?
-
-- **bcrypt** is a password-hashing function designed to securely hash passwords for storage.
-- It employs a strong one-way hashing algorithm, making it computationally intensive and hence resistant to brute-force attacks.
-
-### How does bcrypt work?
-
-- It generates a salted hash of the password, making each hash unique and preventing rainbow table attacks.
-- The computational intensity helps to stop any password cracking attempts by slowing down the hashing process.
-
-### Why use bcrypt?
-
-- **Bcrypt's** is vey resistant to brute-force / Dictionary-based attacks and its adaptive nature (can allow increasing computational complexity over time if needed) makes it a preferred choice for secure password hashing.
-
-
-
