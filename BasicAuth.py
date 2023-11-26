@@ -21,7 +21,7 @@ def encode_basic_auth(username, password):
 def encode_bearer_token(username):
     expiration_time = datetime.datetime.utcnow() + datetime.timedelta(hours=1)
     payload = {'username': username, 'exp': expiration_time}
-    secret_key = 'your-secret-key'  # Replace with a strong secret key
+    secret_key = 'secretkey636'  # Replace with a strong secret key
     token = jwt.encode(payload, secret_key, algorithm='HS256')
     return token
 
@@ -93,7 +93,7 @@ def bearer_token():
     if auth_header and auth_header.startswith('Bearer '):
         token = auth_header.split(' ')[1]
         try:
-            secret_key = 'your-secret-key'  # Replace with the same secret key used in encode_bearer_token
+            secret_key = 'secretkey636'  # Replace with the same secret key used in encode_bearer_token
             payload = jwt.decode(token, secret_key, algorithms=['HS256'])
             return jsonify({'message': 'Bearer Token is valid', 'username': payload['username']})
         except jwt.ExpiredSignatureError:
