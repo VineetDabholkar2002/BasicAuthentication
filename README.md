@@ -1,6 +1,6 @@
 # Flask User Authentication and Authorization
 
-This Flask application demonstrates user authentication and authorization using various methods such as Basic Auth and Bearer Token.
+This Flask appn demonstrates user authentication and authorization using various methods such as Basic Auth, Bearer Token and bcrpyt for password hashing.
 
 ## Project Overview
 
@@ -52,7 +52,7 @@ This project showcases user authentication and authorization features implemente
    - Access `/main` after successful login to view protected content (in this case you will be routed to Google.com.  Unauthorized access will display an error message.
 
 4. **Authentication Tokens:**
-   - Bearer Tokens are generated and verified for user authentication during login.
+   - Bearer Tokens are generated and verified for user authentication during login. Also they can be set to expire after a certain period of time
 
 ## Security Measures with bcrypt
 
@@ -61,16 +61,16 @@ This application utilizes bcrypt for secure password hashing and storage:
 ### What is bcrypt?
 
 - **bcrypt** is a password-hashing function designed to securely hash passwords for storage.
-- It employs a strong one-way hashing algorithm, making it computationally intensive and thereby resistant to brute-force attacks.
+- It employs a strong one-way hashing algorithm, making it computationally intensive and hence resistant to brute-force attacks.
 
 ### How does bcrypt work?
 
 - It generates a salted hash of the password, making each hash unique and preventing rainbow table attacks.
-- The computational intensity helps mitigate password cracking attempts by slowing down the hashing process.
+- The computational intensity helps to stop any password cracking attempts by slowing down the hashing process.
 
 ### Why use bcrypt?
 
-- **Bcrypt's** resistance to brute-force attacks and its adaptive nature (allowing for increasing computational complexity over time) make it a preferred choice for secure password hashing.
+- **Bcrypt's** is vey resistant to brute-force / Dictionary-based attacks and its adaptive nature (can allow increasing computational complexity over time if needed) makes it a preferred choice for secure password hashing.
 
 
 
